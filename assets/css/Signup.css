@@ -1,0 +1,222 @@
+/* 전체 배경 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fafafa;
+}
+
+/* 회원가입 박스 정렬 */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+/* 상단 고정 로고 */
+.top-logo {
+  position: absolute;
+  top: 30px;
+  left: 220px;
+  cursor: pointer;
+}
+
+.top-logo img {
+  width: 100px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.top-logo:hover img {
+  opacity: 1;
+}
+
+/* 내부 로고 */
+.signup-logo {
+  width: 250px;
+  position: relative;
+  bottom: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.signup-logo:hover {
+  opacity: 0.9;
+}
+
+.signup-subtitle {
+  font-size: 14px;
+  color: black;
+  position: relative;
+  bottom: 20px;
+}
+
+/* ===== 폼 ===== */
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  color: gray;
+  margin-bottom: 6px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #66c4ff;
+  outline: none;
+}
+
+.form-group:focus-within label {
+  color: #66c4ff;
+}
+
+/* 에러 메시지 */
+.error-message {
+  font-size: 11px;
+  color: #ff5c5c;
+  margin-top: 4px;
+  height: 14px;
+}
+
+/* 생년월일 */
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon-wrapper input#birth {
+  width: 100%;
+  padding: 12px 12px 12px 38px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.input-icon-wrapper input#birth:focus {
+  border-color: #66c4ff;
+  outline: none;
+}
+
+.input-icon-wrapper input#birth::placeholder {
+  color: #999;
+}
+
+.calendar-icon {
+  position: absolute;
+  top: 42%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.calendar-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 성별/국적 라디오 */
+.radio-combined {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 5px;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ← 텍스트 가운데 정렬 */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 13px;
+    color: #555;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+  
+    min-width: 60px; /* ✅ 버튼 크기 통일 핵심 */
+    height: 20px;    /* ✅ 높이도 고정하면 더 안정적 */
+  }
+
+.radio-button input[type="radio"] {
+  display: none;
+}
+
+.radio-button input[type="radio"]:checked + span {
+  color: #66c4ff;
+  font-weight: 600;
+}
+
+.radio-button span {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+/* 가입 버튼 */
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #66c4ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 로그인 링크 */
+.login-guide {
+  font-size: 12px;
+  margin-top: 12px;
+  color: gray;
+}
+
+.login-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}

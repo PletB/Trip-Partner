@@ -1,0 +1,194 @@
+/* 페이지 전체 기본 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif; /* 한글용 깔끔한 글꼴 */
+    background-color: #fafafa; /* 연한 회색 배경 */
+  }
+  
+  /* 로그인 박스를 화면 가운데 정렬 */
+  .login-wrapper {
+    display: flex;
+    justify-content: center;    /* 수평 중앙 정렬 */
+    align-items: center;        /* 수직 중앙 정렬 */
+    height: 100vh;              /* 화면 전체 높이 */
+  }
+  
+  /* 로그인 박스 스타일 */
+  .login-box {
+    background-color: white;    /* 박스 배경 흰색 */
+    padding: 40px;              /* 안쪽 여백 */
+    border-radius: 12px;        /* 둥근 모서리 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    width: 380px;               /* 박스 너비 */
+    text-align: center;         /* 내부 텍스트 중앙 정렬 */
+  }
+  
+  /* 왼쪽 상단 고정 로고 영역 */
+  .top-logo {
+    position: absolute;         /* 절대 위치 */
+    top: 30px;                  /* 위에서 30px */
+    left: 220px;                /* 왼쪽에서 220px */
+    cursor: pointer;            /* 클릭 가능한 손 모양 커서 */
+  }
+  
+  /* 상단 고정 로고 이미지 스타일 */
+  .top-logo img {
+    width: 100px;
+    height: auto;
+    opacity: 0.85;              /* 약간 흐림 */
+    transition: opacity 0.3s ease; /* 부드러운 투명도 전환 */
+  }
+  
+  .top-logo:hover img {
+    opacity: 1;                 /* 마우스 올리면 선명하게 */
+  }
+  
+  /* 로그인 박스 안의 큰 로고 */
+  .login-logo {
+    width: 250px;
+    position: relative;
+    bottom: 10px;               /* 약간 위로 이동 */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .login-logo:hover {
+    opacity: 0.9;
+  }
+  
+  /* 부제목 스타일 */
+  .login-subtitle {
+    font-size: 14px;
+    color: black;
+    position: relative;
+    bottom: 20px;               /* 위로 이동 */
+  }
+  
+  /* ===== 입력 폼 ===== */
+  
+  /* 폼 그룹(라벨 + 입력창 + 에러메시지) */
+  .form-group {
+    text-align: left;
+    margin-bottom: 18px;        /* 그룹 간 간격 */
+  }
+  
+  /* 입력 필드 라벨 */
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    color: gray;
+    margin-bottom: 6px;
+    font-weight: 500;
+    transition: color 0.3s ease; /* 라벨 색상 전환 */
+  }
+  
+  /* 입력창 스타일 */
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;     /* padding 포함 너비 계산 */
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* 입력창 포커스 시 테두리 색상 변경 */
+  .form-group input:focus {
+    border-color: #66c4ff;      /* 하늘색 */
+    outline: none;              /* 기본 파란 테두리 제거 */
+  }
+  
+  /* 입력창에 포커스 있을 때 라벨 색 변경 */
+  .form-group:focus-within label {
+    color: #66c4ff;
+  }
+  
+  /* '비밀번호를 잊으셨나요?' 링크 */
+  .forgot-password {
+    text-align: left;
+    font-size: 12px;
+    color: #888;
+    cursor: pointer;
+    position: relative;
+    bottom: 12px;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline; /* 마우스 올리면 밑줄 */
+  }
+  
+  /* 로그인 버튼 스타일 */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #66c4ff;  /* 하늘색 배경 */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+  }
+  
+  /* 회원가입 안내 문구 */
+  .signup-guide {
+    font-size: 12px;
+    margin-top: 12px;
+    color: gray;
+  }
+  
+  /* '이메일회원가입' 링크 */
+  .signup-link {
+    color: #007bff;             /* 파란색 링크 */
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+  
+  .signup-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* 구분선 (or 라인) */
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 15px;
+    font-size: 15px;
+    color: #aaa;
+  }
+  
+  /* 구분선 양쪽 선 */
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+    margin: 0 15px;
+  }
+  
+  /* SNS 로그인 안내 텍스트 */
+  .sns-title {
+    font-size: 13px;
+    color: gray;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  /* SNS 아이콘 정렬 영역 */
+  .sns-icons {
+    display: flex;
+    justify-content: space-around; /* 아이콘 간격 균등 */
+    gap: 10px;
+  }
+  
+  /* SNS 아이콘 이미지 크기 */
+  .sns-icons img {
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+  }
+  

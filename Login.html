@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TripPartner - 로그인</title>
+
+  <!-- 외부 CSS 파일 연결 -->
+  <link rel="stylesheet" href="assets/css/Login.css">
+</head>
+<body>
+
+  <!-- 왼쪽 상단 고정 로고 (페이지 이동용) -->
+  <a href="Home.html" class="top-logo">
+    <img src="assets/images/Logo.png" alt="TripPartner 로고">
+  </a>
+
+  <!-- 전체 로그인 페이지를 중앙 정렬하기 위한 래퍼 -->
+  <div class="login-wrapper">
+
+    <!-- 로그인 박스 (실제 로그인 UI가 담긴 박스) -->
+    <div class="login-box">
+
+      <!-- 로그인 박스 안에 있는 상단 로고 (메인으로 이동) -->
+      <a href="Home.html">
+        <img src="assets/images/Logo.png" alt="TripPartner 로고" class="login-logo">
+      </a>
+
+      <!-- 부제목 -->
+      <p class="login-subtitle">국내 여행 플래너, 트립파트너</p>
+
+      <!-- 로그인 폼 영역 -->
+      <form id="loginForm">
+
+        <!-- 이메일 입력 영역 -->
+        <div class="form-group">
+          <label for="email" id="email-label">이메일</label>
+          <input type="text" id="email">
+          <!-- 이메일 관련 에러 메시지가 출력될 div -->
+          <div class="error-message" id="email-error"></div>
+        </div>
+
+        <!-- 비밀번호 입력 영역 -->
+        <div class="form-group">
+          <label for="password" id="password-label">비밀번호</label>
+          <input type="password" id="password">
+          <!-- 비밀번호 관련 에러 메시지가 출력될 div -->
+          <div class="error-message" id="password-error"></div>
+        </div>
+
+        <!-- 비밀번호 찾기 링크 (비활성) -->
+        <div class="forgot-password">비밀번호를 잊으셨나요?</div>
+
+        <!-- 로그인 버튼 -->
+        <button type="submit" class="login-button" id="loginButton">로그인</button>
+      </form>
+
+      <!-- 회원가입 안내 문구 + 링크 -->
+      <div class="signup-guide">
+        아직 회원이 아니신가요?
+        <a href="Signup.html" class="signup-link">이메일회원가입</a>
+      </div>
+
+      <!-- 구분선 -->
+      <div class="divider"><span>or</span></div>
+
+      <!-- SNS 로그인 안내 -->
+      <p class="sns-title">SNS 간편 로그인</p>
+
+      <!-- SNS 로그인 아이콘들 -->
+      <div class="sns-icons">
+        <img src="assets/images/Kakao.png" alt="카카오">
+        <img src="assets/images/Naver.jpg" alt="네이버">
+        <img src="assets/images/Google.png" alt="구글">
+      </div>
+    </div>
+  </div>
+
+  <!-- 로그인 관련 JavaScript 로직 포함 -->
+  <script src="assets/js/Login.js"></script>
+</body>
+</html>

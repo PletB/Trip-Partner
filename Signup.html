@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TripPartner - 회원가입</title>
+
+  <!-- 외부 CSS 파일 연결 -->
+  <link rel="stylesheet" href="assets/css/Signup.css">
+</head>
+
+<body>
+    <!-- 왼쪽 상단 고정 로고 (페이지 이동용) -->
+  <a href="Home.html" class="top-logo">
+    <img src="assets/images/Logo.png" alt="TripPartner 로고">
+  </a>
+  
+  <!-- 중앙 회원가입 박스 -->
+  <div class="signup-wrapper">
+    <div class="signup-box">
+      <a href="Home.html">
+        <img src="assets/images/Logo.png" alt="TripPartner 로고" class="signup-logo" />
+      </a>
+      <p class="signup-subtitle">회원 정보를 입력해주세요</p>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="name">이름</label>
+          <input type="text" id="name" />
+          <div class="error-message" id="name-error"></div>
+        </div>
+      
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="text" id="email" />
+          <div class="error-message" id="email-error"></div>
+        </div>
+      
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" />
+          <div class="error-message" id="password-error"></div>
+        </div>
+      
+        <div class="form-group">
+          <label for="password-confirm">비밀번호 확인</label>
+          <input type="password" id="password-confirm" />
+          <div class="error-message" id="password-confirm-error"></div>
+        </div>
+
+        <!-- 생년월일 입력 -->
+        <div class="form-group birth-field">
+            <label for="birth">생년월일</label>
+            <div class="input-icon-wrapper">
+              <span class="calendar-icon">
+                <img src="assets/images/Calendar.png" alt="달력 아이콘" />
+              </span>
+              <input
+                type="text"
+                id="birth"
+                placeholder="생년월일 8자리 (예: 19990101)"
+                maxlength="8"
+              />
+            </div>
+            <div class="error-message" id="birth-error"></div>
+          </div>
+      
+          <!-- 성별 + 국적 한 줄 정렬 -->
+<div class="form-group horizontal-radio-wrapper">
+    <label>성별 및 국적</label>
+    <div class="radio-combined">
+      <!-- 성별 그룹 -->
+      <div class="radio-group">
+        <label class="radio-button">
+          <input type="radio" name="gender" value="male" />
+          <span>남자</span>
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="gender" value="female" />
+          <span>여자</span>
+        </label>
+      </div>
+  
+      <!-- 국적 그룹 -->
+      <div class="radio-group">
+        <label class="radio-button">
+          <input type="radio" name="nationality" value="korean" />
+          <span>내국인</span>
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="nationality" value="foreigner" />
+          <span>외국인</span>
+        </label>
+      </div>
+    </div>
+    <div class="error-message" id="gender-error"></div>
+  </div>
+          
+        <button type="submit" class="signup-button">회원가입</button>
+      </form>
+
+      <div class="login-guide">
+        이미 계정이 있으신가요?
+        <a href="Login.html" class="login-link">로그인</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/Signup.js"></script>
+</body>
+</html>
