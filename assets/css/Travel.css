@@ -1,0 +1,422 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Webkit 기반 브라우저용 스크롤바 스타일 */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.logo {
+  width: 100px;
+  margin-left: 155px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin-right: 155px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.signup-link {
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+  color: #66c4ff;
+}
+
+.login-button {
+  padding: 6px 12px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.travel-main {
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 650px;
+  margin: 50px auto 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 8px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: rgba(136, 136, 136, 0.6);
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-bar button svg {
+  width: 30px;
+  height: 30px;
+}
+
+.region-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  white-space: nowrap;
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.region-tabs button {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.region-tabs button.active {
+  color: #3dc8ff;
+}
+
+.region-tabs button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3dc8ff;
+  transition: all 0.3s ease;
+}
+
+.destination-container {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 75px;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.destination-card {
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: scale(1.03);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: block;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.destination-card h3 {
+  font-size: 26px;
+  font-weight: 400;
+  color: #111;
+  margin: 0 0 4px;
+}
+
+.destination-card p {
+  font-size: 13px;
+  color: gray;
+  margin: 0;
+}
+
+.destination-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  display: flex;
+  width: 1100px; /* ✅ 1000px → 1200px 또는 1300px 추천 */
+  max-width: 95%;
+  padding: 70px 60px 10px; /* ✅ 양쪽 패딩도 60px로 넉넉히 */
+  border-radius: 10px;
+  position: relative;
+  gap: 120px; /* ✅ 왼쪽/오른쪽 컨텐츠 간 거리 넓히기 */
+  min-height: 580px;
+  align-items: stretch;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #111;
+}
+
+.modal-left {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 40px;
+  width: 500px;
+  position: relative;
+}
+
+.modal-eng {
+  font-size: 20px;
+  color: #aaa;
+  margin-bottom: -3px;
+  position: relative;
+  top: 15px;
+}
+
+.modal-left h2 {
+  margin: 0 0 1px;
+  font-size: 35px;
+  font-weight: bold;
+  position: relative;
+  top: 15px;
+}
+
+.modal-left p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.7;
+  max-width: 440px;
+  position: relative;
+  top: 15px;
+}
+
+.modal-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 35px;
+  position: relative;
+  right: 40px;
+  top: 30px
+}
+
+.modal-info li {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.info-header img {
+  margin-right: 6px; /* ✅ 아이콘과 텍스트 사이 여백 */
+}
+
+.info-icon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.info-title {
+  font-size: 15px;
+  color: #111;
+}
+
+.info-value {
+  font-size: 12px;
+  color: #777;
+  max-width: 160px; /* ✅ 120px → 160px 넓힘 */
+  white-space: normal; /* ✅ nowrap 해제해서 자동 줄바꿈 허용 */
+  word-break: keep-all; /* ✅ 단어 끊기 없이 자연스럽게 */
+  position: relative;
+  top: 10px;
+}
+
+.modal-button {
+  position: absolute;
+  bottom: 74px;
+  padding: 14px 32px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+}
+
+.modal-button:hover {
+  background: #333;
+}
+
+.modal-right {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+  width: 400px;
+}
+
+.modal-right img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.modal-submenu-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+  bottom: 70px;
+}
+
+.submenu-button {
+  padding: 14px 40px;
+  font-size: 20px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+  min-width: 200px;
+}
+
+.submenu-button:hover {
+  background:  #66c4ff; 
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.autocomplete-list li {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.autocomplete-list li:hover {
+  background-color: #f2f2f2;
+}
+
+#noResultMessage {
+  background: #f8f8f8;
+  padding: 60px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  border-radius: 10px;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1200px;
+}

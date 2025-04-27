@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>TripPartner - 여행지</title>
+  <link rel="stylesheet" href="assets/css/Travel.css" />
+</head>
+<body>
+  <header>
+    <a href="Home.html">
+      <img src="assets/images/Logo.png" alt="TripPartner 로고" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="Signup.html" class="signup-link">회원가입</a></li>
+        <li><a href="Login.html" class="login-button">로그인</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="travel-main">
+    <h1 class="title">어디로 여행을 떠나시나요?</h1>
+
+    <div class="search-bar">
+      <input type="search" placeholder="국가명이나 도시명으로 검색해보세요.">
+      <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="23" y1="23" x2="16.65" y2="16.65" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="regionTabs" class="region-tabs"></div>
+
+    <div class="destination-container" id="destination-container"></div>
+
+    <div id="noResultMessage" style="display:none;">검색 결과가 없습니다.</div>
+    
+    <div class="destination-modal" id="destinationModal">
+  <div class="modal-content">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <div class="modal-left">
+      <h5 id="modalEng" class="modal-eng">지역영문</h5>
+      <h2 id="modalTitle">대한민국 지역명</h2>
+      <p id="modalDesc">설명이 여기에 들어갑니다.</p>
+      <ul class="modal-info">
+        <li>
+          <div class="info-header">
+            <img src="assets/icons/bus.svg" alt="교통편" class="info-icon">
+            <div class="info-title">교통편</div>
+          </div>
+          <div class="info-value" id="modalTransport">고속버스, 기차</div>
+        </li>
+        <li>
+          <div class="info-header">
+            <img src="assets/icons/map.svg" alt="관광지" class="info-icon">
+            <div class="info-title">관광지</div>
+          </div>
+          <div class="info-value" id="modalAttraction">남이섬, 아침고요수목원</div>
+        </li>
+        <li>
+          <div class="info-header">
+            <img src="assets/icons/food.svg" alt="지역음식" class="info-icon">
+            <div class="info-title">지역음식</div>
+          </div>
+          <div class="info-value" id="modalFood">잣막국수, 닭갈비</div>
+        </li>
+        <li>
+          <div class="info-header">
+            <img src="assets/icons/hotel.svg" alt="숙소" class="info-icon">
+            <div class="info-title">숙소</div>
+          </div>
+          <div class="info-value" id="modalStay">펜션, 호텔</div>
+        </li>
+      </ul>
+      <a href="Schedule.html">
+      <button class="modal-button">일정만들기 ▶</button>
+      </a>
+    </div>
+    <div class="modal-right">
+      <img id="modalImage" src="assets/images/Travel/강릉.jpg" alt="지역 이미지">
+      <div class="modal-submenu-buttons">
+        <button class="submenu-button submenu-button-transport">교통권</button>
+        <button class="submenu-button submenu-button-stay" id="stayButton">숙소</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+  <script src="assets/js/Travel.js"></script>
+</body>
+</html>

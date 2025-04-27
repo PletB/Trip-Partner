@@ -1,0 +1,210 @@
+/* 기본 세팅 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9f9f9;
+    user-select: none;
+  }
+  
+  /* 사이드바 */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* 메뉴 리스트 */
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px;
+  }
+  
+  .menu li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .menu li:hover {
+    color: #66c4ff;
+  }
+
+  .menu a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* 사이드바 닫기 버튼 */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  /* 사이드바 열기 버튼 (햄버거 버튼) */
+  .open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    display: none; /* 기본은 안 보이게 */
+  }
+  
+  /* 메인 콘텐츠 */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    height: 100vh;
+  }
+  
+  /* 지도 자리 */
+  .map-placeholder {
+    flex: 2;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+  }
+
+  .restaurant-wrapper {
+    position: relative;
+    width: 300px;
+    transition: all 0.3s ease;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .restaurant-content {
+    padding: 20px;
+    height: 100%;
+  }
+  
+  .toggle-restaurant {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px; /* 아주 약간 둥글게 (거의 네모처럼) */
+    width: 24px;
+    height: 40px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 호버 시 살짝 강조 */
+  .toggle-restaurant:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* 닫힌 상태 */
+  .restaurant-wrapper.closed {
+    width: 40px; /* 버튼만 남김 */
+  }
+  
+  /* 챗봇 자리 */
+  .chatbot-placeholder {
+    flex: 1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  /* 사이드바가 숨겨진 상태 */
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+  
+  /* 사이드바가 숨겨진 경우에 햄버거 버튼 보이기 */
+  .sidebar.hidden + .open-btn {
+    display: block;
+  }
+
+  /* 스크롤바 전체 */
+::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+  }
+  
+  /* 스크롤바 트랙 (배경) */
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* 트랙 기본 배경색 */
+  }
+  
+  /* 스크롤바 막대 (움직이는 부분) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* 기본 색 (연한 회색) */
+    border-radius: 4px; /* 약간 둥글게 */
+    transition: background-color 0.3s; /* 부드러운 색 변화 */
+  }
+  
+  /* 스크롤바 막대에 마우스 호버했을 때 */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #999; /* 호버 시 좀 더 진한 회색 */
+  }
+
+  #chatbot-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #66c4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    cursor: grab;
+    z-index: 1000;
+    transition: opacity 0.2s;
+    -webkit-user-drag: none; /* 이미지 드래그 방지 */
+    user-select: none;        /* 텍스트 선택 방지 */
+  }
+  
+  /* 드래그 중 살짝 진하게 */
+  #chatbot-icon.dragging {
+    cursor: grabbing;
+    background-color: #4eb6f7;
+  }
+
+  .sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 10px; /* 위쪽 여백 */
+  }
+  
+  .sidebar-logo img {
+    width: 150px; /* 로고 크기 조정 */
+    height: auto;
+    opacity: 0.8; /* 살짝 연하게 (선택사항) */
+    transition: opacity 0.3s;
+  }
+  
+  .sidebar-logo img:hover {
+    opacity: 1; /* 호버하면 진하게 */
+  }

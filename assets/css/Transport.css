@@ -1,0 +1,136 @@
+/* 기본 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* 헤더 */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+/* 로고 + 타이틀 묶음 */
+.logo-and-title {
+    text-align: center;
+    margin-top: 30px; /* 전체를 약간 아래로 */
+  }
+  
+  .logo {
+    width: 200px;
+    height: auto;
+    position: relative;
+    top: 60px;
+    margin-bottom: 10px; /* 로고랑 승차권 예매 간격 */
+    opacity: 0.6; /* 기본은 연하게 */
+    transition: opacity 0.3s ease; /* 부드럽게 */
+  }
+  
+  .logo:hover {
+    opacity: 1; /* 호버되면 진하게 */
+}
+/* 메인 제목 */
+.main-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+/* 탭 + 본문 전체를 감싸는 wrapper 추가 */
+.tab-and-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 탭 메뉴 */
+.tab-menu {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #cc8ee2;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px 0;
+    background-color: #cc8ee2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    border-right: 1px solid black;
+}
+
+.tab:last-child {
+    border-right: none;
+}
+
+/* 본문 */
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: transparent; /* 배경 따로 안 씀 */
+}
+
+/* 섹션 공통 */
+.section {
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* 왼쪽 섹션만 오른쪽 검은선 */
+.section:first-child {
+    border-right: 1px solid black;
+}
+
+/* 설명 텍스트 */
+.section p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* 사이트명 강조 */
+.site {
+    color: #66c4ff;
+    font-weight: bold;
+}
+
+/* 바로가기 버튼 */
+.link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* 버튼 호버 */
+.link-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* 화살표 */
+.arrow {
+    margin-left: 8px;
+}

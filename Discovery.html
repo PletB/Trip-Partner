@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Trip:Partner - 여행 탐색표</title>
+  <link rel="stylesheet" href="assets/css/Discovery.css">
+  <script defer src="assets/js/Discovery.js"></script>
+</head>
+<body>
+
+  <!-- 사이드바 (기타 서비스 메뉴) -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">×</button>
+
+    <!-- 로고 이미지 추가 -->
+    <div class="sidebar-logo">
+        <a href="Home.html">
+          <img src="assets/images/Logo.png" alt="TripPartner 로고">
+        </a>
+      </div>
+    <ul class="menu">
+      <li>실시간 숙소 추천</li>
+      <li><a href="Transport.html" class="transport-link">교통 예약</a></li>
+    </ul>
+  </div>
+
+  <!-- 사이드바 열기 버튼 (햄버거 메뉴) -->
+  <button class="open-btn" id="openBtn">☰</button>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+
+    <!-- 챗봇 영역 -->
+    <div class="chatbot-placeholder">
+      <!-- 실시간 챗봇 API 자리 -->
+    </div>
+
+    <!-- 네이버 맛집 검색 자리 -->
+<div class="restaurant-wrapper open">
+    <div class="restaurant-content">
+    </div>
+    <button class="toggle-restaurant">&lt;</button> <!-- 처음엔 < 방향 -->
+  </div>
+      
+    <!-- 지도 영역 -->
+    <div class="map-placeholder">
+        <!-- 지도 API 자리 -->
+      </div>
+  </main>
+
+  <!-- Discovery.html 안에 추가할 부분 -->
+<div id="chatbot-icon">
+    🤖
+  </div>
+  
+</body>
+</html>
