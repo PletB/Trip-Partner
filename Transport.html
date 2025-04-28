@@ -2,43 +2,55 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>TripPartner - 승차권 예매</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripPartner - 교통예매</title>
   <link rel="stylesheet" href="assets/css/Transport.css">
 </head>
 <body>
-
-  <!-- 로고 + 승차권 예매 묶음 -->
-  <div class="logo-and-title">
-    <a href="Home.html">
-      <img src="assets/images/Logo.png" alt="TripPartner 로고" class="logo">
+  <!-- 상단 헤더 -->
+  <header class="header">
+    <div class="logo">
+      <a href="Home.html">
+        <img src="assets/images/Logo.png" alt="TripPartner 로고">
+      </a>
+    </div>
+    <a href="Login.html">
+      <button class="login-button">로그인</button>
     </a>
-    <h1 class="main-title">승차권 예매</h1>
-  </div>
+  </header>
 
-  <div class="tab-and-content">
-    <div class="tab-menu">
-      <div class="tab active">고속버스 예매</div>
-      <div class="tab">기차표 예매</div>
+  <!-- 메인 카드 영역 -->
+  <main class="card-container">
+    <div class="card">
+      <img src="assets/images/Transport/KORAIL.png" alt="기차 아이콘" class="card-icon">
+      <h2>KORAIL</h2>
+      <p>
+        <span class="bold-black">"트립파트너"</span>와 함께하는 
+        <span class="bold-black">KORAIL!</span>
+      </p>
+      <a href="https://www.letskorail.com/" class="arrow-button">➔</a>
     </div>
 
-    <div class="content">
-      <div class="section">
-        <p><strong>고속버스</strong>를 이용하실 승객분들은 고속버스통합예매 사이트 <span class="site">KOBUS</span>에서 승차권 예매가 가능합니다.</p>
-        <a href="https://www.kobus.co.kr" target="_blank" class="link-button">
-          <span class="site">KOBUS</span> 바로가기
-          <span class="arrow">➡️</span>
-        </a>
-      </div>
-
-      <div class="section">
-        <p><strong>KTX(고속철도)</strong> 및 <strong>기차</strong>를 이용하실 승객분들은 사이트 <span class="site">KORAIL</span>에서 승차권 예매가 가능합니다.</p>
-        <a href="https://www.letskorail.com" target="_blank" class="link-button">
-          <span class="site">KORAIL</span> 바로가기
-          <span class="arrow">➡️</span>
-        </a>
-      </div>
+    <div class="card">
+      <img src="assets/images/Transport/KOBUS.png" alt="기차 아이콘" class="card-icon">
+      <h2>KOBUS</h2>
+      <p>
+        <span class="bold-black">"트립파트너"</span>와 함께하는 
+        <span class="bold-black">KOBUS!</span>
+      </p>
+      <a href="https://www.kobus.co.kr/main.do" class="arrow-button">➔</a>
     </div>
-  </div>
+
+    <div class="card">
+      <img src="assets/images/Transport/T-Money.png" alt="기차 아이콘" class="card-icon">
+      <h2>T-Money Go</h2>
+      <p>
+        <span class="bold-black">"트립파트너"</span>와 함께하는 
+        <span class="bold-black">T-Money Go!</span>
+      </p>
+      <a href="https://txbus.t-money.co.kr/main.do" class="arrow-button">➔</a>
+    </div>
+  </main>
 
 </body>
 </html>
